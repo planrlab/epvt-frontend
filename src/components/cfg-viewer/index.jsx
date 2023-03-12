@@ -20,7 +20,7 @@ const Component = ({ code }) => {
                 alert={alert}
                 func={() => {
                     setSpinner(true);
-                    fetch('http://localhost:5000/cfg-image', {
+                    fetch(`${process.env.REACT_APP_BACKEND_URL}/cfg-image`, {
                         method: 'POST',
                         crossDomain: true,
                         body: JSON.stringify({
