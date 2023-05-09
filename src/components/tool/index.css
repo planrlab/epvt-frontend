@@ -1,7 +1,9 @@
 .handler {
-    padding: 10px 30px;
+    padding: 0.5em;
 }
 
 .handler button {
     width: 100%;
+    /* font-size: 0.9em; */
+    text-align: center;
 }

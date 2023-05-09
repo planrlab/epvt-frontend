@@ -4,7 +4,7 @@ import SVG from 'react-inlinesvg';
 
 import './index.css';
 
-import Tool from '../tool';
+import Tool from '../../../tool';
 
 const Component = ({ code }) => {
     const [CFG, setCFG] = useState('');

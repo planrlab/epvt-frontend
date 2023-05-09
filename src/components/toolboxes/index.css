@@ -1,0 +1,19 @@
+.toolbox {
+    margin: 1em auto;
+    border: 1px dashed #e64c66;
+
+    width: 90%;
+}
+
+.toolbox-header {
+    padding: 0.5em 0em;
+    border-bottom: 1px dashed #e64c66;
+}
+
+.toolbox-header h3 {
+    margin: 0em;
+}
+
+.toolbox-tools {
+    padding: 0.5em;
+}

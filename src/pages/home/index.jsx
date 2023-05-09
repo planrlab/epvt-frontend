@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './index.css';
 
 import CodeEditor from '../../components/code-editor';
-import ToolBox from '../../components/toolbox';
+import ToolKit from '../../components/toolkit';
 
 const Page = () => {
     const [editor, setEditor] = useState({ code: process.env.REACT_APP_DEMO_CODE });
@@ -14,7 +14,7 @@ const Page = () => {
                 <CodeEditor editorState={{ state: editor, setState: setEditor }} />
             </div>
             <div className="right-pane col-lg-6">
-                <ToolBox code={editor.code} />
+                <ToolKit code={editor.code} />
             </div>
         </div>
     );

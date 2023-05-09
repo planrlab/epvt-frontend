@@ -10,6 +10,7 @@ const Component = ({ setEditorValue }) => {
                 setEditorValue({ code: value });
             }}
         >
+            <option value={process.env.REACT_APP_DEMO_CODE}>Load Demo Code</option>
             {demoContent.map(({ name, code }, index) => {
                 return (
                     <option key={index} value={code}>
