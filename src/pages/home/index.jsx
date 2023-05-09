@@ -1,27 +1,20 @@
 import React, { useState } from 'react';
-import Editor from '@monaco-editor/react';
 
 import './index.css';
-import defaultContent from './demo';
 
+import CodeEditor from '../../components/code-editor';
 import ToolBox from '../../components/toolbox';
 
 const Page = () => {
-    const [editorValue, setEditorValue] = useState({ code: defaultContent });
+    const [editor, setEditor] = useState({ code: process.env.REACT_APP_DEMO_CODE });
 
     return (
         <div className="home row">
-            <div className="col-lg-6">
-                <Editor
-                    defaultLanguage="sol"
-                    value={editorValue.code}
-                    onChange={(value) => {
-                        setEditorValue({ code: value });
-                    }}
-                />
+            <div className="left-pane col-lg-6">
+                <CodeEditor editorState={{ state: editor, setState: setEditor }} />
             </div>
-            <div className="col-lg-6">
-                <ToolBox code={editorValue.code} />
+            <div className="right-pane col-lg-6">
+                <ToolBox code={editor.code} />
             </div>
         </div>
     );

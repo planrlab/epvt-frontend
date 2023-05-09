@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    background-color: #ebf3fe;
+    /* font-size: 0.9em; */
+    text-align: left;
+    padding: 0em 2em;
+}
+
+.footer a {
+    color: #e64c66;
+}
+
+.footer-about {
+    text-align: center;
+}
+
+.footer-version {
+    text-align: right;
+}
