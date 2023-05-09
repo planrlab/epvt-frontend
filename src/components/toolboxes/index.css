@@ -8,6 +8,7 @@
 .toolbox-header {
     padding: 0.5em 0em;
     border-bottom: 1px dashed #e64c66;
+    background-color: #f7f9fa;
 }
 
 .toolbox-header h3 {

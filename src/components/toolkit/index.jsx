@@ -3,15 +3,15 @@ import React from 'react';
 import './index.css';
 
 import Visulization from '../toolboxes/visualization';
-import StaticAnalysis from '../toolboxes/static-analysis';
 import FormalAnalysis from '../toolboxes/formal-analysis';
+import FormalVerification from '../toolboxes/formal-verification';
 
 const Component = ({ code }) => {
     return (
         <div className="toolkit row">
             <Visulization code={code} />
-            <StaticAnalysis code={code} />
             <FormalAnalysis code={code} />
+            <FormalVerification code={code} />
         </div>
     );
 };

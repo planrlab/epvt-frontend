@@ -4,19 +4,24 @@
     bottom: 0;
     width: 100%;
     background-color: #ebf3fe;
-    /* font-size: 0.9em; */
+    font-size: 1.1em;
     text-align: left;
-    padding: 0em 1em;
+    padding: 0em 0.5em;
 }
 
 .footer a {
     color: #e64c66;
 }
 
+.footer-copy {
+    text-align: right;
+}
+
 .footer-about {
     text-align: center;
+    color: #e64c66;
 }
 
 .footer-version {
-    text-align: right;
+    text-align: left;
 }
