@@ -3,6 +3,9 @@ import { Modal } from 'react-bootstrap';
 
 import './index.css';
 
+import AboutSoliMNT from './about-solimnt';
+import Team from './team';
+
 const Component = () => {
     const [show, setShow] = useState(false);
 
@@ -16,7 +19,8 @@ const Component = () => {
                     <Modal.Title>About SoliFMT</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h1>Hello World!</h1>
+                    <AboutSoliMNT />
+                    <Team />
                 </Modal.Body>
             </Modal>
         </>

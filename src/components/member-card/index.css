@@ -1,0 +1,47 @@
+.member-card {
+    box-shadow: 5px 5px 8px #eee;
+    border-radius: 10px;
+    margin: 0.5em;
+    padding: 1em;
+    transition-duration: 0.3s;
+    border: 1px dashed #0d6dfd;
+}
+
+.member-card:hover {
+    box-shadow: 10px 10px 8px #ddd;
+}
+
+.member-card-photo img {
+    width: 8em;
+    height: 8em;
+    border-radius: 100px;
+}
+
+.member-card-name {
+    text-align: left;
+    margin: auto;
+    padding-left: 1em;
+}
+
+.member-card-name h4 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.member-card-name h6 {
+    font-size: 1em;
+}
+
+.member-card-social {
+    padding: 0em 4em 0em 0em;
+}
+
+.member-card-social a {
+    font-size: 1.5em;
+    color: #302f4d;
+    transition-duration: 0.2s;
+}
+
+.member-card-social a:hover {
+    color: #0d6dfd;
+}
