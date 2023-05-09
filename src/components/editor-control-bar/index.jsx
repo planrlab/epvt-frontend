@@ -6,11 +6,11 @@ import UploadFile from './upload-file';
 
 import './index.css';
 
-const Component = ({ setEditorValue }) => {
+const Component = ({ setEditorValue, editorRef }) => {
     return (
         <div className="editor-control-bar row">
             <div className="control-button col-3">
-                <NewFile setEditorValue={setEditorValue} />
+                <NewFile setEditorValue={setEditorValue} editorRef={editorRef} />
             </div>
             <div className="control-button col-3">
                 <SelectDemo setEditorValue={setEditorValue} />

@@ -5,6 +5,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Fira Code', monospace;
+    text-align: center;
+    color: #302f4d;
 }
 
 code {

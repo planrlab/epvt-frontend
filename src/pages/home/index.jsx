@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './index.css';
 
@@ -6,7 +6,11 @@ import CodeEditor from '../../components/code-editor';
 import ToolKit from '../../components/toolkit';
 
 const Page = () => {
-    const [editor, setEditor] = useState({ code: process.env.REACT_APP_DEMO_CODE });
+    const [editor, setEditor] = useState({ code: '' });
+
+    useEffect(() => {
+        setEditor(process.env.REACT_APP_DEMO_CODE);
+    }, []);
 
     return (
         <div className="home row">
