@@ -8,7 +8,7 @@ const Component = ({ code }) => {
     return (
         <div className="toolbox">
             <div className="toolbox-header row">
-                <h3>Static Analysis Tools</h3>
+                <h3>Formal Analysis Tools</h3>
             </div>
             <div className="toolbox-tools">
                 <div className="row">
