@@ -4,6 +4,7 @@ const Component = ({ setEditorValue }) => {
     return (
         <input
             type="file"
+            accept=".sol"
             className="form-control form-control-sm"
             onChange={async (event) => {
                 event.preventDefault();

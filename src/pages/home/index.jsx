@@ -10,10 +10,10 @@ const Page = () => {
 
     return (
         <div className="home row">
-            <div className="left-pane col-lg-6">
+            <div className="left-pane col-lg-7">
                 <CodeEditor editorState={{ state: editor, setState: setEditor }} />
             </div>
-            <div className="right-pane col-lg-6">
+            <div className="right-pane col-lg-5">
                 <ToolKit code={editor.code} />
             </div>
         </div>

@@ -14,7 +14,6 @@ const Component = ({ editorState }) => {
                 value={editorState.state.code}
                 onChange={(value) => {
                     editorState.setState({ code: value });
-                    console.log('THIS', value);
                 }}
             />
         </div>

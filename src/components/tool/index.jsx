@@ -7,8 +7,12 @@ const Component = ({ name, func, spinner }) => {
     return (
         <div className="col-4 handler">
             <button className="btn btn-outline-primary" type="button" onClick={func}>
-                {spinner && <Spinner as="span" animation="border" size="sm" role="status" />}
-                &nbsp;&nbsp;&nbsp;
+                {spinner && (
+                    <>
+                        <Spinner as="span" animation="border" size="sm" role="status" />
+                        &nbsp;
+                    </>
+                )}
                 {name}
             </button>
         </div>
