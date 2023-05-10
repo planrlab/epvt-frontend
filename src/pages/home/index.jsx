@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import './index.css';
 
+import Header from '../../components/header';
+
 import CodeEditor from '../../components/code-editor';
 import ToolKit from '../../components/toolkit';
 
@@ -14,6 +16,7 @@ const Page = () => {
 
     return (
         <div className="home row">
+            <Header />
             <div className="left-pane col-lg-7">
                 <CodeEditor editorState={{ state: editor, setState: setEditor }} />
             </div>

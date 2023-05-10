@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import { Modal, Alert } from 'react-bootstrap';
-import SVG from 'react-inlinesvg';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import { FaDownload } from 'react-icons/fa';
+// import SVG from 'react-inlinesvg';
+// import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+// import { FaDownload } from 'react-icons/fa';
 
 import './index.css';
 
 import Tool from '../../../tool';
 
 const Component = ({ code }) => {
-    const [CFG, setCFG] = useState('');
-    const [show, setShow] = useState(false);
+    // const [CFG, setCFG] = useState('');
+    // const [show, setShow] = useState(false);
     const [spinner, setSpinner] = useState(false);
     const [alert, setAlert] = useState({ show: false, message: '' });
 
-    const downloadCFG = () => {
-        const element = document.createElement('a');
-        const file = new Blob([CFG], { type: 'image/svg+xml' });
-        element.href = URL.createObjectURL(file);
-        element.download = 'control_flow_graph.svg';
-        document.body.appendChild(element); // Required for this to work in FireFox
-        element.click();
-    };
+    // const downloadCFG = () => {
+    //     const element = document.createElement('a');
+    //     const file = new Blob([CFG], { type: 'image/svg+xml' });
+    //     element.href = URL.createObjectURL(file);
+    //     element.download = 'control_flow_graph.svg';
+    //     document.body.appendChild(element); // Required for this to work in FireFox
+    //     element.click();
+    // };
 
     return (
         <>
@@ -44,8 +44,14 @@ const Component = ({ code }) => {
                         .then((res) => res.json())
                         .then((res) => {
                             setSpinner(false);
-                            setShow(true);
-                            setCFG(res['svg-string']);
+                            // setShow(true);
+                            // setCFG(res['svg-string']);
+
+                            localStorage.setItem('cfg_svg_string', res['svg-string']);
+
+                            // open cfg-viewer in new window
+                            const win = window.open('/cfg-viewer', '_blank');
+                            win.focus();
                         })
                         .catch((err) => {
                             setSpinner(false);
@@ -53,7 +59,7 @@ const Component = ({ code }) => {
                         });
                 }}
             />
-            <Modal fullscreen show={show} onHide={() => setShow(false)}>
+            {/* <Modal fullscreen show={show} onHide={() => setShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>CFG Viewer</Modal.Title>
                 </Modal.Header>
@@ -79,7 +85,7 @@ const Component = ({ code }) => {
                         </TransformComponent>
                     </TransformWrapper>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
             <Modal show={alert.show} onHide={() => setAlert({ show: false })}>
                 <Modal.Body>
                     <Alert key="danger" variant="danger">
