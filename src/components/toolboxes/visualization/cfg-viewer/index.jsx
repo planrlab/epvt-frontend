@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Alert } from 'react-bootstrap';
 import SVG from 'react-inlinesvg';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 import './index.css';
 
@@ -20,7 +21,7 @@ const Component = ({ code }) => {
                 alert={alert}
                 func={() => {
                     setSpinner(true);
-                    fetch(`${process.env.REACT_APP_BACKEND_URL}/cfg-image`, {
+                    fetch(`${process.env.REACT_APP_BACKEND_URL}/cfg-svg`, {
                         method: 'POST',
                         crossDomain: true,
                         body: JSON.stringify({
@@ -47,7 +48,18 @@ const Component = ({ code }) => {
                     <Modal.Title>CFG Viewer</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <SVG src={CFG} width="100%" height="auto" title="React" />
+                    <TransformWrapper
+                        initialScale={5}
+                        maxScale={1000}
+                        centerZoomedOut
+                        wheel={{
+                            step: 2
+                        }}
+                    >
+                        <TransformComponent>
+                            <SVG src={CFG} width="100%" height="100%" title="React" />
+                        </TransformComponent>
+                    </TransformWrapper>
                 </Modal.Body>
             </Modal>
             <Modal show={alert.show} onHide={() => setAlert({ show: false })}>
