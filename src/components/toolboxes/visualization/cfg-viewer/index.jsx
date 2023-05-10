@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Alert } from 'react-bootstrap';
 import SVG from 'react-inlinesvg';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import { FaDownload } from 'react-icons/fa';
 
 import './index.css';
 
@@ -12,6 +13,15 @@ const Component = ({ code }) => {
     const [show, setShow] = useState(false);
     const [spinner, setSpinner] = useState(false);
     const [alert, setAlert] = useState({ show: false, message: '' });
+
+    const downloadCFG = () => {
+        const element = document.createElement('a');
+        const file = new Blob([CFG], { type: 'image/svg+xml' });
+        element.href = URL.createObjectURL(file);
+        element.download = 'control_flow_graph.svg';
+        document.body.appendChild(element); // Required for this to work in FireFox
+        element.click();
+    };
 
     return (
         <>
@@ -48,6 +58,14 @@ const Component = ({ code }) => {
                     <Modal.Title>CFG Viewer</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <button
+                        type="button"
+                        className="cfg-download-button btn btn-outline-success"
+                        onClick={() => downloadCFG()}
+                    >
+                        <FaDownload />
+                        &nbsp;Download Image
+                    </button>
                     <TransformWrapper
                         initialScale={5}
                         maxScale={1000}
