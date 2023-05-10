@@ -3,10 +3,11 @@
     z-index: 999;
     bottom: 0;
     width: 100%;
-    background-color: #ebf3fe;
+    background-color: #fff;
     font-size: 1.1em;
     text-align: left;
     padding: 0em 0.5em;
+    border-top: 1px dashed #0d6dfd;
 }
 
 .footer a {

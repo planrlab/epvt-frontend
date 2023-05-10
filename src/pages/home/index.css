@@ -6,4 +6,5 @@
 
 .left-pane {
     border-right: 1px dashed #0d6dfd;
+    height: 100%;
 }

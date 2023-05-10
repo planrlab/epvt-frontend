@@ -1,0 +1,17 @@
+.about-team-button {
+    all: unset;
+}
+
+.about-solimnt {
+    padding: 0em 8em 1em 8em;
+    text-align: justify;
+}
+
+.team-container {
+    padding: 1em 5em;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 1em;
+}

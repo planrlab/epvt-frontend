@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.css';
 
-import AboutTeam from '../about-team';
+// import AboutTeam from '../about-team';
 
 const Component = () => {
     return (
         <div className="footer row">
             <div className="footer-version  col-4">SoliFMT v{process.env.REACT_APP_VERSION}</div>
             <div className="footer-about col-4">
-                <AboutTeam />
+                <Link to="/about">About the Team</Link>
             </div>
             <div className="footer-copy col-4">
                 &copy;&nbsp;{new Date().getFullYear()},&nbsp;

@@ -4,7 +4,7 @@
     margin: 0.5em;
     padding: 1em;
     transition-duration: 0.3s;
-    border: 1px dashed #0d6dfd;
+    /* border: 1px dashed #0d6dfd; */
 }
 
 .member-card:hover {
