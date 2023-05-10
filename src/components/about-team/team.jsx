@@ -41,6 +41,17 @@ const Component = () => {
                     scholar: 'https://scholar.google.com/citations?user=bvqBMKgAAAAJ&hl=en'
                 }}
             />
+            <MemberCard
+                name="Priyambada"
+                projectRole="Frontend Dev. Intern"
+                photo="/static/img/priyambada.jpg"
+                social={{
+                    website: '',
+                    github: 'https://github.com/itspriya21',
+                    linkedin: 'https://www.linkedin.com/in/priya-vatsh-ba456b217/',
+                    scholar: ''
+                }}
+            />
         </div>
     );
 };
