@@ -8,6 +8,11 @@
     margin: 0em;
 }
 
+.header-title a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .title-name {
     font-weight: bolder;
     color: #0d6dfd;

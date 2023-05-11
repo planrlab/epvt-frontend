@@ -26,3 +26,8 @@
 .footer-version {
     text-align: left;
 }
+
+.footer-version a {
+    text-decoration: none;
+    color: inherit;
+}

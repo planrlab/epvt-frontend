@@ -8,7 +8,9 @@ import './index.css';
 const Component = () => {
     return (
         <div className="footer row">
-            <div className="footer-version  col-4">SoliFMT v{process.env.REACT_APP_VERSION}</div>
+            <div className="footer-version  col-4">
+                <Link to="/">SoliFMT v{process.env.REACT_APP_VERSION}</Link>
+            </div>
             <div className="footer-about col-4">
                 <Link to="/about">About the Team</Link>
             </div>
