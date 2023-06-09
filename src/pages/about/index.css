@@ -3,15 +3,17 @@
 }
 
 .about-solimnt {
+    width: inherit;
     padding: 0em 8em 1em 8em;
     text-align: justify;
 }
 
 .team-container {
+    width: inherit;
     padding: 1em 5em;
 }
 
-h3 {
+.about-solimnt h3 {
     text-align: center;
     padding-top: 1em;
 }

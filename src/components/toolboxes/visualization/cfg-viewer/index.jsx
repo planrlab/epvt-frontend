@@ -23,6 +23,23 @@ const Component = ({ code }) => {
     //     element.click();
     // };
 
+    const setErrMessage = () => {
+        if (
+            alert.message === process.env.REACT_APP_ERR_SYNTAX_F ||
+            alert.message === process.env.REACT_APP_ERR_SYNTAX_C
+        )
+            return 'Syntax Error: Could not parse .sol file.';
+        if (alert.message === process.env.REACT_APP_ERR_POPUP)
+            return 'Browser Error: Please enable Pop-up and Redirects for SoliFMT.';
+        if (
+            alert.message === process.env.REACT_APP_ERR_NETWORK_F ||
+            alert.message === process.env.REACT_APP_ERR_NETWORK_C
+        )
+            return 'Network Error: Could not connect to SoliFMT Backend Services.';
+
+        return `Unknown Error: ${alert.message}`;
+    };
+
     return (
         <>
             <Tool
@@ -89,7 +106,7 @@ const Component = ({ code }) => {
             <Modal show={alert.show} onHide={() => setAlert({ show: false })}>
                 <Modal.Body>
                     <Alert key="danger" variant="danger">
-                        {alert.message}
+                        {setErrMessage()}
                     </Alert>
                 </Modal.Body>
             </Modal>
