@@ -1,10 +1,13 @@
-import React from 'react';
-import SVG from 'react-inlinesvg';
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import React, { useState } from 'react';
 import { FaDownload } from 'react-icons/fa';
+
+import SVGPanZoom from '../../../components/svg-pan-zoom';
+
 import './index.css';
 
 const Page = () => {
+    const [svg] = useState(localStorage.getItem('cfg_svg_string'));
+
     const downloadCFG = () => {
         const element = document.createElement('a');
         const file = new Blob([localStorage.getItem('cfg_svg_string')], { type: 'image/svg+xml' });
@@ -28,23 +31,7 @@ const Page = () => {
                 &nbsp;Download CFG
             </button>
 
-            <TransformWrapper
-                initialScale={5}
-                maxScale={1000}
-                centerZoomedOut
-                wheel={{
-                    step: 2
-                }}
-            >
-                <TransformComponent>
-                    <SVG
-                        src={localStorage.getItem('cfg_svg_string')}
-                        width="100%"
-                        height="100%"
-                        title="React"
-                    />
-                </TransformComponent>
-            </TransformWrapper>
+            <SVGPanZoom svg={svg} />
         </div>
     );
 };
