@@ -29,8 +29,10 @@ const Component = ({ code }) => {
             alert.message === process.env.REACT_APP_ERR_SYNTAX_C
         )
             return 'Syntax Error: Could not parse .sol file.';
+
         if (alert.message === process.env.REACT_APP_ERR_POPUP)
             return 'Browser Error: Please enable Pop-up and Redirects for SoliFMT.';
+
         if (
             alert.message === process.env.REACT_APP_ERR_NETWORK_F ||
             alert.message === process.env.REACT_APP_ERR_NETWORK_C
@@ -48,7 +50,7 @@ const Component = ({ code }) => {
                 alert={alert}
                 func={() => {
                     setSpinner(true);
-                    fetch(`${process.env.REACT_APP_BACKEND_URL}/cfg-svg`, {
+                    fetch(`${process.env.REACT_APP_BACKEND_URL_CFG_GEN}/cfg-svg`, {
                         method: 'POST',
                         crossDomain: true,
                         body: JSON.stringify({

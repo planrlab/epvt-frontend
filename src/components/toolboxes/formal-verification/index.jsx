@@ -12,14 +12,14 @@ const Component = ({ code }) => {
             </div>
             <div className="toolbox-tools">
                 <div className="row">
-                    <Tool code={code} name="Dummy Function" />
-                    <Tool code={code} name="Dummy Function" />
-                    <Tool code={code} name="Dummy Function" />
+                    <Tool code={code} name="Dummy Tool" dummy />
+                    <Tool code={code} name="Dummy Tool" dummy />
+                    <Tool code={code} name="Dummy Tool" dummy />
                 </div>
                 <div className="row">
-                    <Tool code={code} name="Dummy Function" />
-                    <Tool code={code} name="Dummy Function" />
-                    <Tool code={code} name="Dummy Function" />
+                    <Tool code={code} name="Dummy Tool" dummy />
+                    <Tool code={code} name="Dummy Tool" dummy />
+                    <Tool code={code} name="Dummy Tool" dummy />
                 </div>
             </div>
         </div>
