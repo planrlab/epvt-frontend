@@ -1,0 +1,56 @@
+.gas-optimizer {
+    width: 100%;
+    height: 97vh;
+    /* display: flex; */
+    position: relative;
+}
+
+.gas-optimizer h2 {
+    margin: 0;
+    margin-left: 1em;
+    padding: 0.1rem;
+    width: fit-content;
+    text-align: left;
+}
+
+.gas-optimizer h2 > span {
+    color: #0d6dfd;
+    font-weight: bold;
+}
+
+.gas-optimizer-pane {
+    width: inherit;
+    /* border-top: 1px dashed #0d6dfd; */
+}
+
+.gas-optimizer-label {
+    /* width: fit-content; */
+    text-align: center;
+    border-bottom: 1px dashed #0d6dfd;
+    border-top: 1px dashed #0d6dfd;
+}
+
+.gas-optimizer-label p {
+    margin: 0;
+    padding: 0.3em;
+}
+
+.gas-optimizer-editor {
+    height: 82vh;
+}
+
+.gas-optimizer-pane-div {
+    border-right: 1px dashed #0d6dfd;
+}
+
+.gas-optimizer-stats {
+    text-align: right;
+}
+
+.gas-optimizer-stats p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    padding-top: 0.2em;
+    padding-right: 2em;
+}

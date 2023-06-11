@@ -5,7 +5,10 @@ import './App.css';
 
 import Footer from './components/footer';
 import Home from './pages/home';
+
 import CFGViewer from './pages/tools/cfg-viewer';
+import GasOptimizer from './pages/tools/gas-optimizer';
+
 import About from './pages/about';
 
 const App = () => {
@@ -14,6 +17,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/cfg-viewer" element={<CFGViewer />} />
+                <Route path="/gas-optimizer" element={<GasOptimizer />} />
                 <Route path="/about" element={<About />} />
             </Routes>
             <Footer />
