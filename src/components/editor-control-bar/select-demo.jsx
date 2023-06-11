@@ -1,10 +1,11 @@
 import React from 'react';
 
 import demoContent from './demo';
+import StringConstants from '../../StringConstants';
 
 const Component = ({ selectControl, setEditorValue }) => {
     const options = [
-        <option key={-1} value={process.env.REACT_APP_DEMO_CODE}>
+        <option key={-1} value={StringConstants.config.DEMO_CODE}>
             Load Demo Code
         </option>,
         ...demoContent.map(({ name, code }, index) => {

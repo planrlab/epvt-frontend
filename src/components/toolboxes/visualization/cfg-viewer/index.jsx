@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Alert } from 'react-bootstrap';
-// import SVG from 'react-inlinesvg';
-// import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-// import { FaDownload } from 'react-icons/fa';
+import StringConstants from '../../../../StringConstants';
 
 import './index.css';
 
@@ -25,17 +23,17 @@ const Component = ({ code }) => {
 
     const setErrMessage = () => {
         if (
-            alert.message === process.env.REACT_APP_ERR_SYNTAX_F ||
-            alert.message === process.env.REACT_APP_ERR_SYNTAX_C
+            alert.message === StringConstants.errors.SYNTAX_F ||
+            alert.message === StringConstants.errors.SYNTAX_C
         )
             return 'Syntax Error: Could not parse .sol file.';
 
-        if (alert.message === process.env.REACT_APP_ERR_POPUP)
+        if (alert.message === StringConstants.errors.POPUP)
             return 'Browser Error: Please enable Pop-up and Redirects for SoliFMT.';
 
         if (
-            alert.message === process.env.REACT_APP_ERR_NETWORK_F ||
-            alert.message === process.env.REACT_APP_ERR_NETWORK_C
+            alert.message === StringConstants.errors.NETWORK_F ||
+            alert.message === StringConstants.errors.NETWORK_C
         )
             return 'Network Error: Could not connect to SoliFMT Backend Services.';
 
@@ -66,7 +64,10 @@ const Component = ({ code }) => {
                             // setShow(true);
                             // setCFG(res['svg-string']);
 
-                            localStorage.setItem('cfg_svg_string', res['svg-string']);
+                            localStorage.setItem(
+                                StringConstants.localStorage.CFG_SVG,
+                                res['svg-string']
+                            );
 
                             // open cfg-viewer in new window
                             const win = window.open('/cfg-viewer', '_blank');

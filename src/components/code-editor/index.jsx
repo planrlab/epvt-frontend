@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import Editor from '@monaco-editor/react';
 
 import EditorControlBar from '../editor-control-bar';
+import StringConstants from '../../StringConstants';
 
 import './index.css';
 
@@ -19,7 +20,7 @@ const Component = ({ editorState }) => {
                 }}
                 onMount={(editor) => {
                     editorRef.current = editor;
-                    editorState.setState({ code: process.env.REACT_APP_DEMO_CODE });
+                    editorState.setState({ code: StringConstants.config.DEMO_CODE });
                     editor.focus();
                 }}
             />

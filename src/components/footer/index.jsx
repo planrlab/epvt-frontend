@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import StringConstants from '../../StringConstants';
+
 import './index.css';
 
 // import AboutTeam from '../about-team';
@@ -9,7 +11,7 @@ const Component = () => {
     return (
         <div className="footer row">
             <div className="footer-version  col-4">
-                <Link to="/">SoliFMT v{process.env.REACT_APP_VERSION}</Link>
+                <Link to="/">SoliFMT v{StringConstants.config.VERSION}</Link>
             </div>
             <div className="footer-about col-4">
                 <Link to="/about">About the Team</Link>

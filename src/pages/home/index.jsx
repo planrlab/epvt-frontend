@@ -6,12 +6,13 @@ import Header from '../../components/header';
 
 import CodeEditor from '../../components/code-editor';
 import ToolKit from '../../components/toolkit';
+import StringConstants from '../../StringConstants';
 
 const Page = () => {
     const [editor, setEditor] = useState({ code: '' });
 
     useEffect(() => {
-        setEditor(process.env.REACT_APP_DEMO_CODE);
+        setEditor(StringConstants.config.DEMO_CODE);
     }, []);
 
     return (
