@@ -7,7 +7,8 @@ const Strings = {
         NETWORK_C: 'Failed to fetch'
     },
     localStorage: {
-        CFG_SVG: 'CFG_SVG_STRING'
+        CFG_SVG: 'CFG_SVG_STRING',
+        GAS_OPT_CODE: 'GAS_OPT_CODE'
     },
     config: {
         DEMO_CODE: '// Enter your code here.... \n',

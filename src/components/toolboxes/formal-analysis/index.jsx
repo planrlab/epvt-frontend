@@ -3,6 +3,7 @@ import React from 'react';
 import '../index.css';
 
 import Tool from '../../tool';
+import GasOptimizer from './gas-optimizer';
 
 const Component = ({ code }) => {
     return (
@@ -12,7 +13,7 @@ const Component = ({ code }) => {
             </div>
             <div className="toolbox-tools">
                 <div className="row">
-                    <Tool code={code} name="Optimize Gas" />
+                    <GasOptimizer code={code} />
                     <Tool code={code} name="SSA Generator" />
                     <Tool code={code} name="Dummy Tool" dummy />
                 </div>

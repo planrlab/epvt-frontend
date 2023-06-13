@@ -15,7 +15,13 @@ const Page = () => {
                 </h2>
             </div>
             <div className="col-8 gas-optimizer-stats">
-                <p>Gas Optimized: 0000</p>
+                <p>
+                    Gas Optimized:{' '}
+                    {
+                        JSON.parse(localStorage.getItem(StringConstants.localStorage.GAS_OPT_CODE))
+                            .gas
+                    }
+                </p>
             </div>
             <div className="row gas-optimizer-pane">
                 <div className="col-6 gas-optimizer-pane-div">
@@ -25,7 +31,11 @@ const Page = () => {
                     <div className="row gas-optimizer-editor">
                         <Editor
                             defaultLanguage="sol"
-                            value={localStorage.getItem(StringConstants.localStorage.CFG_SVG)}
+                            value={
+                                JSON.parse(
+                                    localStorage.getItem(StringConstants.localStorage.GAS_OPT_CODE)
+                                ).original
+                            }
                             options={{ readOnly: true }}
                         />
                     </div>
@@ -37,7 +47,11 @@ const Page = () => {
                     <div className="row gas-optimizer-editor">
                         <Editor
                             defaultLanguage="sol"
-                            value={localStorage.getItem(StringConstants.localStorage.CFG_SVG)}
+                            value={
+                                JSON.parse(
+                                    localStorage.getItem(StringConstants.localStorage.GAS_OPT_CODE)
+                                ).optimized
+                            }
                             options={{ readOnly: true }}
                         />
                     </div>
