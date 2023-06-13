@@ -1,8 +1,8 @@
 .member-card {
     box-shadow: 5px 5px 8px #eee;
     border-radius: 10px;
-    margin: 0.5em;
-    padding: 1em;
+    margin: 0.5rem;
+    padding: 1rem;
     transition-duration: 0.3s;
     /* border: 1px dashed #0d6dfd; */
 }
@@ -12,32 +12,32 @@
 }
 
 .member-card-photo img {
-    width: 8em;
-    height: 8em;
+    width: 8rem;
+    height: 8rem;
     border-radius: 100px;
 }
 
 .member-card-name {
     text-align: left;
     margin: auto;
-    padding-left: 1em;
+    padding-left: 1rem;
 }
 
 .member-card-name h4 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
 .member-card-name h6 {
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .member-card-social {
-    padding: 0em 4em 0em 0em;
+    padding: 0rem 4rem 0rem 0rem;
 }
 
 .member-card-social a {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #302f4d;
     transition-duration: 0.2s;
 }
