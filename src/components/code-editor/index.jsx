@@ -13,6 +13,7 @@ const Component = ({ editorState }) => {
         <div className="code-editor">
             <EditorControlBar setEditorValue={editorState.setState} editorRef={editorRef} />
             <Editor
+                className="monaco-editor"
                 defaultLanguage="sol"
                 value={editorState.state.code}
                 onChange={(value) => {

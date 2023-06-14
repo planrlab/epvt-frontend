@@ -8,11 +8,15 @@ const Strings = {
     },
     localStorage: {
         CFG_SVG: 'CFG_SVG_STRING',
-        GAS_OPT_CODE: 'GAS_OPT_CODE'
+        GAS_OPT_CODE: 'GAS_OPT_CODE',
+        SSA_FILES: 'SSA_FILES'
     },
     config: {
         DEMO_CODE: '// Enter your code here.... \n',
         VERSION: '1.1'
+    },
+    colors: {
+        BG_HIGHLIGHT: '#B5D2FE'
     }
 };
 

@@ -8,9 +8,9 @@
 .cfg-viewer h2 {
     position: absolute;
     top: 0;
-    left: 1em;
-    margin: 0em;
-    padding: 0em;
+    left: 1rem;
+    margin: 0rem;
+    padding: 0rem;
     z-index: 999;
     width: fit-content;
     text-align: left;
@@ -28,8 +28,8 @@
 
 .cfg-download-button {
     position: fixed;
-    top: 1em;
-    right: 1em;
+    top: 1rem;
+    right: 1rem;
     z-index: 9999;
     width: fit-content;
     background-color: #fff;

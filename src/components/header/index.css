@@ -1,11 +1,11 @@
 .header {
     text-align: center;
-    padding: 0.5em;
+    padding: 0.5rem;
     border-bottom: 1px dashed #0d6dfd;
 }
 
 .header-title {
-    margin: 0em;
+    margin: 0;
 }
 
 .header-title a {

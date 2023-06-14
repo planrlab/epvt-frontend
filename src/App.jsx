@@ -8,6 +8,7 @@ import Home from './pages/home';
 
 import CFGViewer from './pages/tools/cfg-viewer';
 import GasOptimizer from './pages/tools/gas-optimizer';
+import SSAViewer from './pages/tools/ssa-viewer';
 
 import About from './pages/about';
 
@@ -18,6 +19,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/cfg-viewer" element={<CFGViewer />} />
                 <Route path="/gas-optimizer" element={<GasOptimizer />} />
+                <Route path="/ssa-viewer" element={<SSAViewer />} />
                 <Route path="/about" element={<About />} />
             </Routes>
             <Footer />

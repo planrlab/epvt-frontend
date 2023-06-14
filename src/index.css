@@ -12,3 +12,13 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.monaco-editor {
+    font-size: 1rem;
+}
+
+@media (min-resolution: 144dpi) {
+    html {
+        font-size: 80%;
+    }
+}

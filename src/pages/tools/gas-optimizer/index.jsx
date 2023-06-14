@@ -30,6 +30,7 @@ const Page = () => {
                     </div>
                     <div className="row gas-optimizer-editor">
                         <Editor
+                            className="monaco-editor"
                             defaultLanguage="sol"
                             value={
                                 JSON.parse(
@@ -46,6 +47,7 @@ const Page = () => {
                     </div>
                     <div className="row gas-optimizer-editor">
                         <Editor
+                            className="monaco-editor"
                             defaultLanguage="sol"
                             value={
                                 JSON.parse(

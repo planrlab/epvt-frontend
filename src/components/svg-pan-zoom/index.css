@@ -1,14 +1,14 @@
 .pan-zoom-controls {
     position: fixed;
-    right: 2em;
-    bottom: 3em;
+    right: 2rem;
+    bottom: 3rem;
     z-index: 999;
     width: auto;
 }
 
 .pan-zoom-controls button {
     all: unset;
-    padding: 0.5em;
+    padding: 0.5rem;
     background-color: #fff;
     border: 1px solid #ddd;
 }
