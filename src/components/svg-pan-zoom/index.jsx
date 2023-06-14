@@ -5,10 +5,10 @@ import { FaPlus, FaMinus, FaRegDotCircle } from 'react-icons/fa';
 
 import './index.css';
 
-const Component = ({ svg }) => {
+const Component = ({ svg, initialScale = 2 }) => {
     return (
         <TransformWrapper
-            initialScale={5}
+            initialScale={initialScale}
             maxScale={1000}
             centerZoomedOut
             wheel={{

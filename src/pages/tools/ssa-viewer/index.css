@@ -54,3 +54,9 @@
     padding-top: 0.2rem;
     padding-right: 2rem;
 }
+
+.ssa-viewer-graphs {
+    border: 1px dashed #0d6dfd;
+    border-right: none;
+    border-left: none;
+}

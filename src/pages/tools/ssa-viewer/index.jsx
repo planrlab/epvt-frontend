@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Editor from '@monaco-editor/react';
 // import { FaDownload } from 'react-icons/fa';
 
+import SVGPanZoom from '../../../components/svg-pan-zoom';
+
 import StringConstants from '../../../StringConstants';
 
 import './index.css';
@@ -43,9 +45,11 @@ const Page = () => {
                         <Editor
                             className="monaco-editor"
                             defaultLanguage="sol"
-                            value={`JSON.parse(
+                            value={
+                                JSON.parse(
                                     localStorage.getItem(StringConstants.localStorage.SSA_FILES)
-                                ).code`}
+                                ).source
+                            }
                             options={{ readOnly: true }}
                         />
                     </div>
@@ -87,16 +91,40 @@ const Page = () => {
                     </div>
                     <div className="row ssa-viewer-editor">
                         <div className="col-12" style={{ display: panes[0] }}>
-                            Dominator Tree
+                            <SVGPanZoom
+                                svg={
+                                    JSON.parse(
+                                        localStorage.getItem(StringConstants.localStorage.SSA_FILES)
+                                    ).dominatorTree
+                                }
+                            />
                         </div>
                         <div className="col-12" style={{ display: panes[1] }}>
-                            CFG
+                            <SVGPanZoom
+                                svg={
+                                    JSON.parse(
+                                        localStorage.getItem(StringConstants.localStorage.SSA_FILES)
+                                    ).cfg
+                                }
+                            />
                         </div>
                         <div className="col-12" style={{ display: panes[2] }}>
-                            SSA Form
+                            <SVGPanZoom
+                                svg={
+                                    JSON.parse(
+                                        localStorage.getItem(StringConstants.localStorage.SSA_FILES)
+                                    ).ssaForm
+                                }
+                            />
                         </div>
                         <div className="col-12" style={{ display: panes[3] }}>
-                            DSA Form
+                            <SVGPanZoom
+                                svg={
+                                    JSON.parse(
+                                        localStorage.getItem(StringConstants.localStorage.SSA_FILES)
+                                    ).dsaForm
+                                }
+                            />
                         </div>
                     </div>
                 </div>
