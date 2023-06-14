@@ -60,3 +60,7 @@
     border-right: none;
     border-left: none;
 }
+
+.ssa-viewer-graph-panes {
+    height: inherit;
+}

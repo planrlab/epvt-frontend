@@ -16,6 +16,41 @@ contract SimpleStorage {
 }`
     },
     {
+        name: 'SSA Sample',
+        code: `// SPDX-License-Identifier: MIT
+pragma solidity ^0.5.2;
+contract Sample{
+    function fun(int32 a, int32 b) payable public returns(int32){
+        int32 mul;
+        require (a >= 0);
+        require (b >= 0);  
+        if(a == 0){
+            b = 100;
+            // tmp [a] = b;
+        }
+        else if (a == 1){
+            b = 1000;
+            // tmp [a] = b;
+        }
+        else{
+            b = 10000;  
+            // tmp [a] = b;
+        }      
+        
+        while (b > 500){
+            // require (b <100000 && mul > 0);
+            mul = mul + a * b ;
+            b = b/2;
+            // mul += tmp[b];
+        }
+
+        assert (b < 11000);
+
+        return mul;
+    }
+}`
+    },
+    {
         name: 'Voting',
         code: `pragma solidity 0.5.16;
 

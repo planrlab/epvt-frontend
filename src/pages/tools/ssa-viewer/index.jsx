@@ -90,7 +90,10 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="row ssa-viewer-editor">
-                        <div className="col-12" style={{ display: panes[0] }}>
+                        <div
+                            className="col-12 ssa-viewer-graph-panes"
+                            style={{ display: panes[0] }}
+                        >
                             <SVGPanZoom
                                 svg={
                                     JSON.parse(
@@ -99,7 +102,10 @@ const Page = () => {
                                 }
                             />
                         </div>
-                        <div className="col-12" style={{ display: panes[1] }}>
+                        <div
+                            className="col-12 ssa-viewer-graph-panes"
+                            style={{ display: panes[1] }}
+                        >
                             <SVGPanZoom
                                 svg={
                                     JSON.parse(
@@ -108,7 +114,10 @@ const Page = () => {
                                 }
                             />
                         </div>
-                        <div className="col-12" style={{ display: panes[2] }}>
+                        <div
+                            className="col-12 ssa-viewer-graph-panes"
+                            style={{ display: panes[2] }}
+                        >
                             <SVGPanZoom
                                 svg={
                                     JSON.parse(
@@ -117,7 +126,10 @@ const Page = () => {
                                 }
                             />
                         </div>
-                        <div className="col-12" style={{ display: panes[3] }}>
+                        <div
+                            className="col-12 ssa-viewer-graph-panes"
+                            style={{ display: panes[3] }}
+                        >
                             <SVGPanZoom
                                 svg={
                                     JSON.parse(
