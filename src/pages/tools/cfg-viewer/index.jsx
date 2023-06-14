@@ -34,7 +34,7 @@ const Page = () => {
                 &nbsp;Download CFG
             </button>
 
-            <SVGPanZoom svg={svg} />
+            <SVGPanZoom svg={svg} initialScale={5} />
         </div>
     );
 };
