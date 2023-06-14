@@ -1,0 +1,56 @@
+.ssa-viewer {
+    width: 100%;
+    height: 97vh;
+    /* display: flex; */
+    position: relative;
+}
+
+.ssa-viewer h2 {
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0.1rem;
+    width: fit-content;
+    text-align: left;
+}
+
+.ssa-viewer h2 > span {
+    color: #0d6dfd;
+    font-weight: bold;
+}
+
+.ssa-viewer-pane {
+    width: inherit;
+    /* border-top: 1px dashed #0d6dfd; */
+}
+
+.ssa-viewer-label {
+    /* width: fit-content; */
+    text-align: center;
+    border-bottom: 1px dashed #0d6dfd;
+    border-top: 1px dashed #0d6dfd;
+}
+
+.ssa-viewer-graphs p {
+    margin: 0;
+    padding: 0.3rem;
+}
+
+.ssa-viewer-editor {
+    height: 82vh;
+}
+
+.ssa-viewer-pane-div {
+    border-right: 1px dashed #0d6dfd;
+}
+
+.ssa-viewer-stats {
+    text-align: right;
+}
+
+.ssa-viewer-stats p {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    padding-top: 0.2rem;
+    padding-right: 2rem;
+}
