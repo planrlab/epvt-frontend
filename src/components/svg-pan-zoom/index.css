@@ -6,9 +6,17 @@
     width: auto;
 }
 
-.pan-zoom-controls button {
+.pan-zoom-controls-button {
     all: unset;
-    padding: 0.5rem;
+    padding: 0.75rem;
     background-color: #fff;
     border: 1px solid #ddd;
+}
+
+.pan-zoom-download-btn {
+    margin-bottom: 2rem;
+}
+
+.pan-zoom-download-btn button {
+    background-color: #fff;
 }

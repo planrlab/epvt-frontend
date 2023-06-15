@@ -100,6 +100,7 @@ const Page = () => {
                                         localStorage.getItem(StringConstants.localStorage.SSA_FILES)
                                     ).dominatorTree
                                 }
+                                graphName="dominator_tree"
                             />
                         </div>
                         <div
@@ -112,6 +113,7 @@ const Page = () => {
                                         localStorage.getItem(StringConstants.localStorage.SSA_FILES)
                                     ).cfg
                                 }
+                                graphName="control_flow_graph"
                             />
                         </div>
                         <div
@@ -124,6 +126,7 @@ const Page = () => {
                                         localStorage.getItem(StringConstants.localStorage.SSA_FILES)
                                     ).ssaForm
                                 }
+                                graphName="ssa_form"
                             />
                         </div>
                         <div
@@ -136,6 +139,7 @@ const Page = () => {
                                         localStorage.getItem(StringConstants.localStorage.SSA_FILES)
                                     ).dsaForm
                                 }
+                                graphName="dsa_form"
                             />
                         </div>
                     </div>
