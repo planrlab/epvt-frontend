@@ -18,7 +18,7 @@ const Component = ({ name, func, spinner, dummy = false }) => {
                         &nbsp;
                     </>
                 )}
-                {name}
+                {!spinner && name}
             </button>
         </div>
     );
