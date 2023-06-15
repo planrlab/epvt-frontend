@@ -57,7 +57,7 @@ const Page = () => {
                 <div className="col-7 ssa-viewer-pane-div">
                     <div className="row ssa-viewer-graphs">
                         <div
-                            className="col-3"
+                            className="col-3 bttn-with-border"
                             id="ssa-pane-0"
                             onClick={switchPane}
                             style={{ backgroundColor: paneTabs[0] }}
@@ -65,7 +65,7 @@ const Page = () => {
                             Dominator Tree
                         </div>
                         <div
-                            className="col-3"
+                            className="col-3 bttn-with-border"
                             id="ssa-pane-1"
                             onClick={switchPane}
                             style={{ backgroundColor: paneTabs[1] }}
@@ -73,7 +73,7 @@ const Page = () => {
                             CFG
                         </div>
                         <div
-                            className="col-3"
+                            className="col-3 bttn-with-border"
                             id="ssa-pane-2"
                             onClick={switchPane}
                             style={{ backgroundColor: paneTabs[2] }}

@@ -22,3 +22,13 @@ code {
         font-size: 80%;
     }
 }
+
+.row {
+    padding-left: 0rem;
+    padding-right: 0rem;
+
+    --bs-gutter-x: 0rem;
+
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
