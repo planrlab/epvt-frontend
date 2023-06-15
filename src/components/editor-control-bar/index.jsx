@@ -23,7 +23,8 @@ const Component = ({ setEditorValue, editorRef }) => {
                     setEditorValue={setEditorValue}
                 />
             </div>
-            <div className="control-button col-6">
+            <div className="col-1">&nbsp;</div>
+            <div className="control-button col-5">
                 <UploadFile setEditorValue={setEditorValue} />
             </div>
         </div>
