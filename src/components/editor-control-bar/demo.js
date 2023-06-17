@@ -51,6 +51,72 @@ contract Sample{
 }`
     },
     {
+        name: 'Optimization Sample 1',
+        code: `pragma solidity >=0.4.22 <0.6.0;
+contract Sample{
+   struct Student { 
+      uint age;
+   }
+    Student student = Student(32);
+    mapping(uint => uint) public prices;
+    uint[10] balance;
+    uint[][][] temp = [[[2,4],[3,6]],[[2,4],[3,6]]];
+    int result;
+
+function  fun2(uint a, uint b, uint c)
+    pure  public  returns(uint){
+        uint d; uint e; uint f; uint g; uint h;
+        d = c +  b * a +  a * b;
+        e = a * b + c;
+        f = a * b + b * a;
+        g = b * a;
+        h = e + f + g;
+        return d + h;
+    }
+    
+function  fun1(uint a, uint b, uint c)
+    public  returns(uint){
+	   uint a1 = b + c;
+	   balance[c] = b + a + c + balance[c + b];
+        uint e = c + balance[b]+ temp[b][c][c];
+	   uint d = student.age;
+	   d = b + student.age;
+	   e = prices[2] + prices[balance[b]+d + c+temp[b][c][c]];
+	   a = fun2(b, c, e);
+	   uint b1 = b + fun2(b, c, e) + c;
+	   uint c1 = uint(a);
+	   uint d1 = uint(fun2(b, c, e)) + c1;	
+        return b1 + e + d1;
+    }
+}`
+    },
+    {
+        name: 'Optimization Sample 2',
+        code: `pragma solidity >=0.4.22 <0.6.0;
+contract Sample{
+function  cse_example(uint a, uint b, uint c)
+    pure  public  returns(uint){
+        uint d; uint e; uint f; uint g; uint h;
+        d = c +  b * a +  a * b;
+        e = a * b + c;
+        f = a * b + b * a;
+        g = b * a;
+        h = e + f + g;
+	  do{
+		a = g ;
+		d = h +  b * a +  a * b;
+	      e = a * b + c;
+     	  	 f = a * b + b * a;
+     		 g = b * a;
+        	h = e + f + g;
+	  }while(f>g);
+
+        return d + h;
+    }
+
+}`
+    },
+    {
         name: 'Voting',
         code: `pragma solidity 0.5.16;
 
