@@ -8,7 +8,7 @@ const Strings = {
     },
     localStorage: {
         CFG_SVG: 'CFG_SVG_STRING',
-        GAS_OPT_CODE: 'GAS_OPT_CODE',
+        GAS_OPT_FILES: 'GAS_OPT_FILES',
         SSA_FILES: 'SSA_FILES'
     },
     config: {

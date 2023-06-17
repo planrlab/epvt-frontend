@@ -52,11 +52,11 @@ const Component = ({ code }) => {
                             setSpinner(false);
 
                             localStorage.setItem(
-                                StringConstants.localStorage.GAS_OPT_CODE,
+                                StringConstants.localStorage.GAS_OPT_FILES,
                                 JSON.stringify({
-                                    original: res['original-code'],
+                                    source: res['original-code'],
                                     optimized: res['optimized-code'],
-                                    gas: res['gas-saved']
+                                    cseOptimized: res['cse-optimized-code']
                                 })
                             );
 
