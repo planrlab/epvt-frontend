@@ -1,11 +1,11 @@
-.cfg-viewer {
+.graph-viewer-page {
     width: 100%;
     height: 97vh;
     /* display: flex; */
     position: relative;
 }
 
-.cfg-viewer h2 {
+.graph-viewer-page h2 {
     position: absolute;
     top: 0;
     left: 1rem;
@@ -16,7 +16,7 @@
     text-align: left;
 }
 
-.cfg-viewer h2 > span {
+.graph-viewer-page h2 > span {
     color: #0d6dfd;
     font-weight: bold;
 }
@@ -24,13 +24,4 @@
 .react-transform-wrapper {
     width: 100% !important;
     height: 100% !important;
-}
-
-.cfg-download-button {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 9999;
-    width: fit-content;
-    background-color: #fff;
 }

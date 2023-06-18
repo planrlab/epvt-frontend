@@ -4,6 +4,9 @@ import '../index.css';
 
 import Tool from '../../tool';
 import CFGViewer from './cfg-viewer';
+import SSAViewer from './ssa-viewer';
+import DSAViewer from './dsa-viewer';
+import DomTreeViewer from './domtree-viewer';
 
 const Component = ({ code }) => {
     return (
@@ -14,11 +17,11 @@ const Component = ({ code }) => {
             <div className="toolbox-tools">
                 <div className="row">
                     <CFGViewer code={code} />
-                    <Tool code={code} name="Dummy Tool" dummy />
-                    <Tool code={code} name="Dummy Tool" dummy />
+                    <SSAViewer code={code} />
+                    <DSAViewer code={code} />
                 </div>
                 <div className="row">
-                    <Tool code={code} name="Dummy Tool" dummy />
+                    <DomTreeViewer code={code} />
                     <Tool code={code} name="Dummy Tool" dummy />
                     <Tool code={code} name="Dummy Tool" dummy />
                 </div>

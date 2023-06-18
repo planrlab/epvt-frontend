@@ -72,6 +72,7 @@ const Component = ({ code }) => {
                         });
                 }}
             />
+
             <Modal show={alert.show} onHide={() => setAlert({ show: false })}>
                 <Modal.Body>
                     <Alert key="danger" variant="danger">

@@ -4,7 +4,6 @@ import '../index.css';
 
 import Tool from '../../tool';
 import GasOptimizer from './gas-optimizer';
-import SSAGenerator from './ssa-generator';
 
 const Component = ({ code }) => {
     return (
@@ -15,7 +14,7 @@ const Component = ({ code }) => {
             <div className="toolbox-tools">
                 <div className="row">
                     <GasOptimizer code={code} />
-                    <SSAGenerator code={code} />
+                    <Tool code={code} name="Dummy Tool" dummy />
                     <Tool code={code} name="Dummy Tool" dummy />
                 </div>
                 <div className="row">

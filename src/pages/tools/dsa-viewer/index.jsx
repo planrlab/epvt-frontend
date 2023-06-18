@@ -5,10 +5,10 @@ import StringConstants from '../../../StringConstants';
 
 const Page = () => {
     const [svg] = useState(
-        JSON.parse(localStorage.getItem(StringConstants.localStorage.SSA_FILES)).ssaForm
+        JSON.parse(localStorage.getItem(StringConstants.localStorage.SSA_FILES)).dsaForm
     );
 
-    return <GraphViewerPage name="SSA" graph={svg} fileName="ssa_graph" initialScale={2} />;
+    return <GraphViewerPage name="DSA" graph={svg} fileName="dsa_graph" initialScale={2} />;
 };
 
 export default Page;
