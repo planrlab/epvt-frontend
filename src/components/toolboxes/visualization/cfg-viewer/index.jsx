@@ -43,7 +43,7 @@ const Component = ({ code }) => {
     return (
         <>
             <Tool
-                name="Generate CFG"
+                name="Control Flow"
                 spinner={spinner}
                 alert={alert}
                 func={() => {

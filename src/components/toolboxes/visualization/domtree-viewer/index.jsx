@@ -32,7 +32,7 @@ const Component = ({ code }) => {
     return (
         <>
             <Tool
-                name="Dom Tree Gen."
+                name="Dominator Tree"
                 spinner={spinner}
                 alert={alert}
                 func={() => {
