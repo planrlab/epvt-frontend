@@ -7,7 +7,7 @@ import CFGViewer from './cfg-viewer';
 import SSAViewer from './ssa-viewer';
 import DSAViewer from './dsa-viewer';
 import DomTreeViewer from './domtree-viewer';
-import OGRViewer from './ogr-viewer';
+// import OGRViewer from './ogr-viewer';
 
 const Component = ({ code }) => {
     return (
@@ -23,7 +23,8 @@ const Component = ({ code }) => {
                 </div>
                 <div className="row">
                     <DomTreeViewer code={code} />
-                    <OGRViewer code={code} />
+                    {/* <OGRViewer code={code} /> */}
+                    <Tool code={code} name="Dummy Tool" dummy />
                     <Tool code={code} name="Dummy Tool" dummy />
                 </div>
             </div>
