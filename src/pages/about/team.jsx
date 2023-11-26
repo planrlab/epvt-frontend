@@ -52,6 +52,17 @@ const Component = () => {
                     scholar: ''
                 }}
             />
+            <MemberCard
+                name="Tausif"
+                projectRole="Tool Contributor"
+                photo="/static/img/tausif.jpg"
+                social={{
+                    website: '',
+                    github: '',
+                    linkedin: '',
+                    scholar: ''
+                }}
+            />
         </div>
     );
 };
