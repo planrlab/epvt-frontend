@@ -30,7 +30,17 @@ const Component = () => {
                     scholar: 'https://scholar.google.com/citations?user=Neuj3C4AAAAJ&hl=en'
                 }}
             />
-
+            <MemberCard
+                name="Arnab Mukherjee"
+                projectRole="Full Stack Developer"
+                photo="https://raw.githubusercontent.com/mukherjeearnab/mukherjeearnab.github.io/static/img/profile.jpg"
+                social={{
+                    website: 'https://mukherjeearnab.github.io/',
+                    github: 'https://github.com/mukherjeearnab',
+                    linkedin: 'https://www.linkedin.com/in/arnabm99',
+                    scholar: 'https://scholar.google.com/citations?user=bvqBMKgAAAAJ&hl=en'
+                }}
+            />
             <MemberCard
                 name="Priyambada"
                 projectRole="Frontend Dev. Intern"
@@ -43,8 +53,8 @@ const Component = () => {
                 }}
             />
             <MemberCard
-                name="Tausif"
-                projectRole="Tool Contributor"
+                name="Tauseef"
+                projectRole="Tool Developer"
                 photo="/static/img/tausif.jpg"
                 social={{
                     website: '',
