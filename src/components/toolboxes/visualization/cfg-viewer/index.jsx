@@ -70,7 +70,10 @@ const Component = ({ code }) => {
                             );
 
                             // open cfg-viewer in new window
-                            const win = window.open('/cfg-viewer', '_blank');
+                            const win = window.open(
+                                `${process.env.PUBLIC_URL}/cfg-viewer`,
+                                '_blank'
+                            );
                             win.focus();
                         })
                         .catch((err) => {

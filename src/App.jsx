@@ -19,16 +19,16 @@ const App = () => {
     return (
         <div className="App">
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="" element={<Home />} />
 
-                <Route path="/cfg-viewer" element={<CFGViewer />} />
-                <Route path="/gas-optimizer" element={<GasOptimizer />} />
-                <Route path="/ssa-viewer" element={<SSAViewer />} />
-                <Route path="/dsa-viewer" element={<DSAViewer />} />
-                <Route path="/domtree-viewer" element={<DomTreeViewer />} />
-                <Route path="/object-graph-viewer" element={<OGRViewer />} />
+                <Route path="cfg-viewer" element={<CFGViewer />} />
+                <Route path="gas-optimizer" element={<GasOptimizer />} />
+                <Route path="ssa-viewer" element={<SSAViewer />} />
+                <Route path="dsa-viewer" element={<DSAViewer />} />
+                <Route path="domtree-viewer" element={<DomTreeViewer />} />
+                <Route path="object-graph-viewer" element={<OGRViewer />} />
 
-                <Route path="/about" element={<About />} />
+                <Route path="about" element={<About />} />
             </Routes>
             <Footer />
         </div>
