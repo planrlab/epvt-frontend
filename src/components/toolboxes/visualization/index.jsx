@@ -17,13 +17,18 @@ const Component = ({ code }) => {
             </div>
             <div className="toolbox-tools">
                 <div className="row">
+                    <Tool code={code} name="AST" dummy />
+                    <DomTreeViewer code={code} />
                     <CFGViewer code={code} />
+                </div>
+                <div className="row">
+                    <OGRViewer code={code} />
                     <SSAViewer code={code} />
                     <DSAViewer code={code} />
                 </div>
                 <div className="row">
-                    <DomTreeViewer code={code} />
-                    <OGRViewer code={code} />
+                    <Tool code={code} name="Near-pruned SSA" dummy />
+                    <Tool code={code} name="Direct DSA" dummy />
                     <Tool code={code} name="Dummy Tool" dummy />
                 </div>
             </div>

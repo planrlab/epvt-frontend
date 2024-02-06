@@ -32,7 +32,7 @@ const Component = ({ code }) => {
     return (
         <>
             <Tool
-                name="DSA Graph"
+                name="DSA Graph (DF)"
                 spinner={spinner}
                 alert={alert}
                 func={() => {
