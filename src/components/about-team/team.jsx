@@ -11,7 +11,7 @@ const Component = () => {
             <MemberCard
                 name="Raju Halder"
                 projectRole="Project Supervisor"
-                photo="/static/img/halder.jpg"
+                photo="static/img/halder.jpg"
                 social={{
                     website: 'https://iitp.ac.in/~halder/',
                     github: 'https://github.com/RajuHalder/',
@@ -22,7 +22,7 @@ const Component = () => {
             <MemberCard
                 name="Akshay M. Fajge"
                 projectRole="Toolchain and Backend Developer"
-                photo="/static/img/akshay.jpg"
+                photo="static/img/akshay.jpg"
                 social={{
                     website: '',
                     github: '',
@@ -44,7 +44,7 @@ const Component = () => {
             <MemberCard
                 name="Priyambada"
                 projectRole="Frontend Dev. Intern"
-                photo="/static/img/priyambada.jpg"
+                photo="static/img/priyambada.jpg"
                 social={{
                     website: '',
                     github: 'https://github.com/itspriya21',

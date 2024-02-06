@@ -11,10 +11,10 @@ const Component = () => {
     return (
         <div className="footer row">
             <div className="footer-version  col-4">
-                <Link to="/">SoliFMT v{StringConstants.config.VERSION}</Link>
+                <Link to="">SoliFMT v{StringConstants.config.VERSION}</Link>
             </div>
             <div className="footer-about col-4">
-                <Link to="/about">About the Team</Link>
+                <Link to="about">About the Team</Link>
             </div>
             <div className="footer-copy col-4">
                 &copy;&nbsp;{new Date().getFullYear()},&nbsp;
