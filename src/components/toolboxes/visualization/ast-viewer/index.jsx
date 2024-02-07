@@ -7,19 +7,8 @@ import './index.css';
 import Tool from '../../../tool';
 
 const Component = ({ code }) => {
-    // const [CFG, setCFG] = useState('');
-    // const [show, setShow] = useState(false);
     const [spinner, setSpinner] = useState(false);
     const [alert, setAlert] = useState({ show: false, message: '' });
-
-    // const downloadCFG = () => {
-    //     const element = document.createElement('a');
-    //     const file = new Blob([CFG], { type: 'image/svg+xml' });
-    //     element.href = URL.createObjectURL(file);
-    //     element.download = 'control_flow_graph.svg';
-    //     document.body.appendChild(element); // Required for this to work in FireFox
-    //     element.click();
-    // };
 
     const setErrMessage = () => {
         if (
@@ -43,7 +32,7 @@ const Component = ({ code }) => {
     return (
         <>
             <Tool
-                name="Control Flow"
+                name="AS Tree"
                 spinner={spinner}
                 alert={alert}
                 func={() => {
@@ -61,17 +50,15 @@ const Component = ({ code }) => {
                         .then((res) => res.json())
                         .then((res) => {
                             setSpinner(false);
-                            // setShow(true);
-                            // setCFG(res['svg-string']);
 
                             localStorage.setItem(
-                                StringConstants.localStorage.CFG_SVG,
-                                res['cfg-svg']
+                                StringConstants.localStorage.AST_SVG,
+                                res['ast-svg']
                             );
 
-                            // open cfg-viewer in new window
+                            // open ast-viewer in new window
                             const win = window.open(
-                                `${process.env.PUBLIC_URL}/cfg-viewer`,
+                                `${process.env.PUBLIC_URL}/ast-viewer`,
                                 '_blank'
                             );
                             win.focus();
@@ -82,33 +69,6 @@ const Component = ({ code }) => {
                         });
                 }}
             />
-            {/* <Modal fullscreen show={show} onHide={() => setShow(false)}>
-                <Modal.Header closeButton>
-                    <Modal.Title>CFG Viewer</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <button
-                        type="button"
-                        className="cfg-download-button btn btn-outline-success"
-                        onClick={() => downloadCFG()}
-                    >
-                        <FaDownload />
-                        &nbsp;Download Image
-                    </button>
-                    <TransformWrapper
-                        initialScale={5}
-                        maxScale={1000}
-                        centerZoomedOut
-                        wheel={{
-                            step: 2
-                        }}
-                    >
-                        <TransformComponent>
-                            <SVG src={CFG} width="100%" height="100%" title="React" />
-                        </TransformComponent>
-                    </TransformWrapper>
-                </Modal.Body>
-            </Modal> */}
             <Modal show={alert.show} onHide={() => setAlert({ show: false })}>
                 <Modal.Body>
                     <Alert key="danger" variant="danger">

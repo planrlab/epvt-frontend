@@ -3,6 +3,7 @@ import React from 'react';
 import '../index.css';
 
 import Tool from '../../tool';
+import ASTViewer from './ast-viewer';
 import CFGViewer from './cfg-viewer';
 import SSAViewer from './ssa-viewer';
 import DSAViewer from './dsa-viewer';
@@ -17,7 +18,7 @@ const Component = ({ code }) => {
             </div>
             <div className="toolbox-tools">
                 <div className="row">
-                    <Tool code={code} name="AST" dummy />
+                    <ASTViewer code={code} />
                     <DomTreeViewer code={code} />
                     <CFGViewer code={code} />
                 </div>
