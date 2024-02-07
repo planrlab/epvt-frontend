@@ -10,10 +10,15 @@
     top: 0;
     left: 1rem;
     margin: 0rem;
-    padding: 0rem;
+    padding: 0rem 0.5rem 0.1rem 1rem;
+    /* padding-right: 0.5rem;
+    padding-bottom: 0.1rem; */
     z-index: 999;
     width: fit-content;
     text-align: left;
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    /* -webkit-filter: blur(8px); */
 }
 
 .graph-viewer-page h2 > span {
