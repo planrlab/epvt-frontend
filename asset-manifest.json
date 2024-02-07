@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/solifmt/static/css/main.c6d8c0a2.css",
-    "main.js": "/solifmt/static/js/main.19925301.js",
+    "main.css": "/solifmt/static/css/main.093413a1.css",
+    "main.js": "/solifmt/static/js/main.b7bad4df.js",
     "index.html": "/solifmt/index.html",
-    "main.c6d8c0a2.css.map": "/solifmt/static/css/main.c6d8c0a2.css.map",
-    "main.19925301.js.map": "/solifmt/static/js/main.19925301.js.map"
+    "main.093413a1.css.map": "/solifmt/static/css/main.093413a1.css.map",
+    "main.b7bad4df.js.map": "/solifmt/static/js/main.b7bad4df.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d8c0a2.css",
-    "static/js/main.19925301.js"
+    "static/css/main.093413a1.css",
+    "static/js/main.b7bad4df.js"
   ]
 }
