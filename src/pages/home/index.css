@@ -8,3 +8,10 @@
     border-right: 1px dashed #0d6dfd;
     height: 100%;
 }
+
+.left-pane .right-pane {
+    height: 56vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

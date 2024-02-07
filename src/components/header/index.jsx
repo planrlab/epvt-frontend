@@ -7,7 +7,7 @@ const Component = () => {
     return (
         <div className="header">
             <h2 className="header-title">
-                <Link to="">
+                <Link to="/">
                     <span className="title-name">SoliFMT</span>: Formal Methods Toolkit for Solidity
                 </Link>
             </h2>

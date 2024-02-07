@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import SplitPane, { Pane } from 'split-pane-react';
 
+import 'split-pane-react/esm/themes/default.css';
 import './index.css';
 
 import Header from '../../components/header';
@@ -15,14 +17,31 @@ const Page = () => {
         setEditor(StringConstants.config.DEMO_CODE);
     }, []);
 
+    const [sizes, setSizes] = useState(['55%']);
+
+    // const layoutCSS = {
+    //     height: '100%',
+    //     display: 'flex',
+    //     alignItems: 'center',
+    //     justifyContent: 'center'
+    // };
+
     return (
-        <div className="home row">
+        <div className="row">
             <Header />
-            <div className="left-pane col-lg-7">
-                <CodeEditor editorState={{ state: editor, setState: setEditor }} />
-            </div>
-            <div className="right-pane col-lg-5">
-                <ToolKit code={editor.code} />
+            <div className="home row">
+                <SplitPane split="vertical" sizes={sizes} onChange={setSizes}>
+                    <Pane minSize={50} maxSize="70%">
+                        <div className="left-pane">
+                            <CodeEditor editorState={{ state: editor, setState: setEditor }} />
+                        </div>
+                    </Pane>
+                    <Pane minSize={30} maxSize="50%">
+                        <div className="right-pane">
+                            <ToolKit code={editor.code} />
+                        </div>
+                    </Pane>
+                </SplitPane>
             </div>
         </div>
     );

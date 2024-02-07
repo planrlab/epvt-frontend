@@ -15,7 +15,7 @@ const Strings = {
     },
     config: {
         DEMO_CODE: '// Enter your code here.... \n',
-        VERSION: '1.1'
+        VERSION: '1.2'
     },
     colors: {
         BG_HIGHLIGHT: '#B5D2FE'
